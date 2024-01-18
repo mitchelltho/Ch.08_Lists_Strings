@@ -33,34 +33,37 @@ def showmap1():
     arcade.run()
 
 userchoice = ""
-player_floor = 1
 
 
+room_list = []
+room = ["", 1, None, None, None]
+room_list.append(room)
 input("Welcome To Adventure Game(Temp) Press Enter To Continue ")
 playing = True
+#player_floor = 1
 while playing:
     print("Go North")
     print("Go East")
     print("Go South")
     print("Go West")
     print("Q. Quit")
-    print("M. Map")
     print("Stairs. Use Stairs")
     input("What Would You Like To Do? ").upper()
     if userchoice == "Q":
         playing = False
         break
-
-    if userchoice == "M":
-        if player_floor == 1:
-            showmap1()
-        elif player_floor == 2:
-            showmap2()
-        elif player_floor == "A":
-            showmapA()
-        elif player_floor == "B":
-            showmapB()
+    elif userchoice == "M":
+        #if player_floor == 1:
+        print("There was once a planned map action that would show you the map of the floor you were on.")
+        showmap1()
+        #elif player_floor == 2:
+        #    showmap2()
+        #elif player_floor == "A":
+        #    showmapA()
+        #elif player_floor == "B":
+        #    showmapB()
         continue
+    elif userchoice == "E":
 
 
 
